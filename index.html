@@ -1145,20 +1145,22 @@ footer {
   .resultado-num { text-align: left; }
 }
 
+/* menu mobile sempre oculto por padrão (fora de qualquer media query) */
+.nav-mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #0A0E0B;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 80px 32px 48px;
+  gap: 0;
+}
+.nav-mobile-menu.open { display: flex; }
+
 /* ══ RESPONSIVO MOBILE (≤600px) ══ */
 @media (max-width: 600px) {
-  /* NAV mobile menu */
-  .nav-mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: #0A0E0B;
-    z-index: 999;
-    display: none;
-    flex-direction: column;
-    padding: 80px 32px 48px;
-    gap: 0;
-  }
-  .nav-mobile-menu.open { display: flex; }
+  /* NAV mobile menu — estilos de conteúdo */
   .nav-mobile-menu a {
     display: block;
     font-family: 'Sora', sans-serif;
@@ -1288,16 +1290,6 @@ footer {
   </div>
 </nav>
 
-<!-- mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <a href="#sobre" class="mobile-link">Sobre</a>
-  <a href="#servicos" class="mobile-link">Serviços</a>
-  <a href="#metodologia" class="mobile-link">Metodologia</a>
-  <a href="#para-quem" class="mobile-link">Para Quem</a>
-  <a href="#cta" class="btn btn-primary">Quero uma Consultoria</a>
-  <a href="https://app.arkhen.com.br" style="font-size:13px;color:var(--fg-dim);">Portal do Cliente →</a>
-</div>
 
 <!-- BLOCO 1: HERO -->
 <section class="hero">
@@ -1722,7 +1714,6 @@ footer {
         <span class="footer-logo-text">ARKHEN</span>
       </div>
       <span class="footer-copy">© 2026 Arkhen Consultoria Empresarial</span>
-      <a href="https://app.arkhen.com.br" class="footer-portal">Portal do Cliente →</a>
     </div>
   </div>
 </footer>
@@ -1736,14 +1727,6 @@ window.addEventListener('scroll', () => {
 
 // ─── HAMBURGER ───
 const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
-
-hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
-mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
-document.querySelectorAll('.mobile-link, .mobile-menu .btn, .mobile-menu a').forEach(el => {
-  el.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
 
 // ─── SCROLL REVEAL ───
 const reveals = document.querySelectorAll('.reveal');
