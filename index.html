@@ -2122,6 +2122,7 @@ function openPost(d){
   document.getElementById('modal-post').hidden = false;
 }
 
+function closeModal(id) { const el = document.getElementById('modal-' + id); if (el) el.hidden = true; }
 document.addEventListener('keydown', e => { if (e.key==='Escape' && !document.getElementById('modal-post').hidden) closeModal('post'); });
 function pageComingSoon(id) { return comingSoonPage(id); }
 
