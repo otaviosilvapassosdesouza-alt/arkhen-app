@@ -26,7 +26,7 @@ a{text-decoration:none;color:inherit;}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,11,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 72px;height:62px;display:flex;align-items:center;justify-content:space-between;}
-.nav-logo{display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:800;font-size:14px;letter-spacing:.09em;color:var(--fg);}
+.nav-logo{display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:800;font-size:14px;letter-spacing:.09em;color:var(--accent);}
 .nav-links{display:flex;list-style:none;gap:28px;}
 .nav-links a{font-size:13px;color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--fg);}
@@ -320,9 +320,11 @@ footer a:hover{color:rgba(255,255,255,0.45);}
       ARKHEN
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#metodologia">Metodologia</a></li>
-      <li><a href="index.html#para-quem">Para quem é</a></li>
-      <li><a href="index.html">Outros serviços</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sprint.html" style="color:var(--fg)">Arkhen Sprint</a></li>
+      <li><a href="build.html">Arkhen Build</a></li>
+      <li><a href="board.html">Arkhen Board</a></li>
+      <li><a href="one.html">Arkhen One</a></li>
     </ul>
     <a href="https://wa.me/5564992900455?text=Ol%C3%A1%21+Vim+pelo+site+da+Arkhen+e+quero+falar+com+um+consultor." class="btn-nav">Falar com um consultor</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
@@ -333,9 +335,10 @@ footer a:hover{color:rgba(255,255,255,0.45);}
 <div class="mobile-overlay" id="mobile-menu">
   <button class="mobile-close-btn" id="mobile-close">x</button>
   <a href="index.html">Início</a>
-  <a href="index.html#metodologia">Metodologia</a>
-  <a href="index.html#para-quem">Para quem é</a>
-  <a href="index.html">Outros serviços</a>
+  <a href="sprint.html" style="color:var(--fg)">Arkhen Sprint</a>
+  <a href="build.html">Arkhen Build</a>
+  <a href="board.html">Arkhen Board</a>
+  <a href="one.html">Arkhen One</a>
   <a href="https://wa.me/5564992900455?text=Ol%C3%A1%21+Vim+pelo+site+da+Arkhen+e+quero+falar+com+um+consultor." class="mobile-cta">Falar com um consultor</a>
 </div>
 
@@ -704,7 +707,7 @@ footer a:hover{color:rgba(255,255,255,0.45);}
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Arkhen Consultoria. Todos os direitos reservados. &middot; <a href="index.html">Voltar ao site</a></p>
+    <p>&copy; 2025 Arkhen Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
 
