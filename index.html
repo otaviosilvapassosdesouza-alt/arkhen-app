@@ -1797,8 +1797,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 function handlePortalLogin(e) {
   e.preventDefault();
-  // Placeholder — integração real virá depois
-  document.getElementById('portal-error').style.display = 'block';
+  var email = document.getElementById('portal-email').value.trim().toLowerCase();
+  var pass = document.getElementById('portal-pass').value;
+  if (email === 'contatoarkhen@gmail.com' && pass === 'luizotavio1999ok') {
+    window.location.href = 'Portal_Arkhen.html';
+  } else {
+    document.getElementById('portal-error').style.display = 'block';
+  }
 }
 </script>
 </body>
