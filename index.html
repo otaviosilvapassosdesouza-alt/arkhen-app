@@ -1787,7 +1787,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <label for="portal-email">E-mail</label>
       <input type="email" id="portal-email" placeholder="seu@email.com" required>
       <label for="portal-pass">Senha</label>
-      <input type="password" id="portal-pass" placeholder="••••••••" required>
+      <div style="position:relative">
+        <input type="password" id="portal-pass" placeholder="••••••••" required style="width:100%;padding-right:44px;box-sizing:border-box">
+        <button type="button" onclick="var i=document.getElementById('portal-pass');i.type=i.type==='password'?'text':'password';this.textContent=i.type==='password'?'👁':'🙈'" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;padding:0;line-height:1">👁</button>
+      </div>
       <button type="submit" class="portal-submit">Entrar</button>
     </form>
     <p id="portal-error" style="color:#E07B39;font-size:12px;margin-top:12px;display:none;">Credenciais inválidas. Tente novamente.</p>
